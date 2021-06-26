@@ -4,19 +4,31 @@ import Player.*;
 public class PlayerFactory {
     static int y = 0;
     public static Player getPlayer(String type){
+        char sym;
+        String name;
         if(type.equals("Human")){
-            char sym;
-            if(y == 0) sym = 'X';
-            else sym = 'o';
+            if(y == 0){
+                sym = 'X';
+                name = "Player X";
+            }
+            else{
+                sym = 'O';
+                name = "Player O";
+            }
             y = (y+1)%2;
-            return new HumanPlayer(sym);
+            return new HumanPlayer(sym, name);
         }
         else{
-            char sym;
-            if(y == 0) sym = 'X';
-            else sym = 'o';
+            if(y == 0){
+                sym = 'X';
+                name = "Player X";
+            }
+            else{
+                sym = 'O';
+                name = "Player O";
+            }
             y = (y+1)%2;
-            return new ComputerPlayer(sym);
+            return new ComputerPlayer(sym, name);
         }
     }
 }

@@ -5,7 +5,5 @@ public class Board {
     public Board(int dimension){
         this.board = new char[dimension][dimension];
     }
-    public int getRowSum(int row){
 
-    }
 }

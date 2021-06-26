@@ -1,5 +1,5 @@
 package WinnerStrategy;
 
 public interface WinnerStrategy {
-    public void checkWinner(char[][] A);
+    char checkWinner(char[][] A);
 }
